@@ -11,8 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.12'}
-      - run: pip install scipy==1.15.3\n      - run: python runtime/external_reproduction_v1.py
+        with:
+          python-version: '3.12'
+      - run: pip install scipy==1.15.3
+      - run: python runtime/external_reproduction_v1.py
       - uses: actions/upload-artifact@v4
         with:
           name: f124-external-reproduction-v1
